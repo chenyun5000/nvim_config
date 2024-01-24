@@ -1,6 +1,7 @@
 This document is to introduce how to build an IDE on Ubuntu environment.
 
 You can do it follow the steps below:
+
 1.make a bin directory to store your tools.
 
 mkdir ~/bin
