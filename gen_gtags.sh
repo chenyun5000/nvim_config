@@ -9,7 +9,7 @@ function update_gtags() {
 	   -g '*.h' \
 	   -g '*.hpp' \
 	   -g '*.hxx' \
-       -g '*.java' \
+           -g '*.java' \
 	   -g '*.dts' \
 	   -g '*.dtsi' \
 	   -g '*.conf' \
