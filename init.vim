@@ -1,7 +1,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-    Plug 'joshdick/onedark.vim'
+"    Plug 'joshdick/onedark.vim'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
     Plug 'easymotion/vim-easymotion'
@@ -16,12 +16,21 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'preservim/nerdtree'
     Plug 'Xuyuanp/nerdtree-git-plugin'
     Plug 'majutsushi/tagbar'
+"    Plug 'crusoexia/vim-monokai'
 call plug#end()
 
-let g:onedark_config = {
-    \ 'style': 'warm',
-\}
-colorscheme onedark
+" theme
+"let g:onedark_terminal_italics=1
+"colorscheme onedark
+
+"let g:onedark_config = {
+"    \ 'style': 'warm',
+"\}
+syntax enable
+syntax on
+"set background=light
+"let g:colors_name="white"
+"colorscheme monokai
 set clipboard+=unnamedplus
 "关闭鼠标
 set mouse=
@@ -42,7 +51,7 @@ set splitbelow
 set splitright
 " set wildignorecase
 set ignorecase
-set colorcolumn=80
+"set colorcolumn=80
 set cursorline
 " cursorcolumn cause performance issue
 " set cursorcolumn
@@ -50,8 +59,8 @@ set ruler
 set nowrap
 set number relativenumber
 set termguicolors
-syntax enable
-syntax on
+"syntax enable
+"syntax on
 set hidden
 " fix terminal last line issue
 let g:neoterm_autoscroll=1
@@ -63,10 +72,6 @@ set wildoptions=pum
 set pumblend=20
 set pumheight=15
 set signcolumn=yes
-
-" theme
-let g:onedark_terminal_italics=1
-colorscheme onedark
 
 "reload file
 autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
@@ -318,7 +323,7 @@ command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport
 
 " +++++++++++++++++ tagbar begin ++++++++++++++++++++++++++++++++++
 nnoremap <silent> <F2> :TagbarToggle<CR>  " tagbar
-let g:tagbar_autofocus=1          " 设置光标默认在tagbar页面内
+let g:tagbar_autofocus=0          " 设置光标默认在tagbar页面内
 let g:tagbar_width=40             " 设置宽度40，默认30
 let g:tagbar_sort=0               " 设置默认不排序
 " +++++++++++++++++ tagbar end ++++++++++++++++++++++++++++++++++++
@@ -340,7 +345,8 @@ let g:Lf_GtagsStoreInRootMarker = 1
 let g:Lf_ShortcutF = '<m-o>'
 
 "file search setting and ignore path setting
-nnoremap <leader>f :LeaderfFile ~<cr>
+nnoremap <leader>ff :LeaderfFile ~<cr>
+nnoremap <leader>f :LeaderfFile<cr>
 noremap <m-f> :LeaderfFunction!<cr>
 let g:Lf_WildIgnore = {
             \ 'dir': ['.svn','.git','.hg','.vscode','.wine','.deepinwine','.oh-my-zsh', '.repo','out'],
@@ -369,5 +375,5 @@ xnoremap gf :<C-U><C-R>=printf("Leaderf! rg -F -e %s ", leaderf#Rg#visual())<CR>
 noremap gd :<C-U><C-R>=printf("Leaderf! gtags --by-context --match-path --auto-jump")<CR><CR>
 
 let $GTAGSLABEL = 'native-pygments'
-let $GTAGSCONF = '/home/chenshiyun/.usr_bin/share/gtags/gtags.conf'
+let $GTAGSCONF = '/home/docker/bin/share/gtags/gtags.conf'
 " +++++++++++++++++ LeaderF end +++++++++++++++++++++++++++++++++++
