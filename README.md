@@ -36,7 +36,11 @@ pip3 install jedi
 pip3 install jedi-language-server
 
 pip3 install pynvim neovim
-
+//offline to install pynvim to visit :https://pypi.org/
+download :
+pynvim / msgpack / jedi
+using command to install
+pip3 install tools/msgpack-1.1.2.tar.gz
 3.install fzf
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
