@@ -37,7 +37,6 @@ pip3 install jedi-language-server
 
 pip3 install pynvim neovim
 
-
 3.install fzf
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -106,8 +105,17 @@ F).other tips:
 
 neovim may need nodejs,so we have to install nodejs,this below is how to install nodejs:
 
+方法一：
+//离线安装node js
+官网下载：
+https://nodejs.org/zh-cn/download
+下载 node-v16.20.2-linux-x64.tar.xz版本
+拷贝到服务器，执行如下操作：
+tar -xf node-v16.20.2-linux-x64.tar.xz
+cp -r node-v16.20.2-linux-x64 ~/bin/
+echo "PATH=~/bin/node-v16.20.2-linux-x64/bin:\$PATH" >> ~/.bashrc
+方法二：
 //install node
-
 sudo apt install -y nodejs npm
 
 sudo npm install n -g
