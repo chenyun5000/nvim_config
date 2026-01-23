@@ -134,6 +134,7 @@ echo "PATH=~/bin/node-v16.20.2-linux-x64/bin:\$PATH" >> ~/.bashrc
 方法二：
 
 //install node
+
 sudo apt install -y nodejs npm
 
 sudo npm install n -g
