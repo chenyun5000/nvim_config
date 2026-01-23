@@ -81,7 +81,7 @@ git clone https://github.com/neovim/neovim.git
 
 cd neovim/
 
-make CMAKE_INSTALL_PREFIX=$HOME/bin/ install
+make CMAKE_BUILD_TYPE=Release CMAKE_INSTALL_PREFIX=$HOME/bin/ install
 
 B).setup neovim environment && settings
 
